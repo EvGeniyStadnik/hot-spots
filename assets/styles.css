@@ -1,0 +1,93 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{background:transparent;border:0;font-size:100%;margin:0;outline:0;padding:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}a:hover,a:active{outline:0;}html{-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}img{-ms-interpolation-mode:bicubic;}button,input[type="button"],input[type="reset"],input[type="submit"],[role="button"]{cursor:pointer;-webkit-appearance:button;}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;}[hidden]{display:none;}button::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;resize:vertical;}
+var{font-weight:inherit;font-style:inherit;}
+/* main */
+html{
+    width:100%;
+    min-height:100%;
+    user-select:none;
+    background-color:#f5f5f5;
+}
+body{
+    margin:0 auto;
+    padding:0;
+    font-family:sans-serif;
+    background-color:#fff;
+    position:relative;
+}
+body > img{
+    display:block;
+    width:100%;
+    pointer-events:none;
+}
+body > a{
+    opacity:0.001;
+    transition:opacity 0.3s linear;
+    position:absolute;
+    display:block;
+    box-sizing:border-box;
+    background-color:red;
+    border-radius:1px;
+}
+html.debug{
+    cursor:crosshair;
+}
+body.active > a{
+    opacity:0.5;
+}
+html.debug body > a{
+    opacity:0.5;
+    cursor:crosshair;
+}
+body > span{
+    display:none;
+    position:absolute;
+    left:-1000px;
+    top:-1000px;
+    cursor:crosshair;
+    color:#fff;
+    margin:5px;
+    font-size:12px;
+    background-color:gray;
+    opacity: 0.2;
+    padding:3px 5px;
+    font-family:monospace;
+    border-radius:3px;
+    z-index:1;
+}
+body > span{
+    display:inline-block;
+}
+
+/* index button */
+.menuicon {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: block;
+    cursor: pointer;
+    height: 21px;
+    width: 25px;
+}
+.menuicon span {
+    display: block;
+    top: 8px;
+    width: 25px;
+    height: 5px;
+    background-color: #000;
+    position: relative;
+}
+.menuicon span::after, .menuicon span::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 5px;
+    background-color: #000;
+}
+.menuicon span::before {
+    margin-top: -8px;
+}
+.menuicon span::after {
+    margin-top: 8px;
+}
